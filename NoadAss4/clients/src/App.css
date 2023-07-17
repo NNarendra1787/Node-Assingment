@@ -1,0 +1,140 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body{
+  height: 100vh;
+  width: 100%;
+}
+
+.navigation{
+  display: flex;
+  width: 100%;
+  height: 80px;
+  /* border-radius: 36px; */
+  margin: 5px auto;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rebeccapurple;
+  
+}
+.btns{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 20%;
+  height: 5%;
+  margin: 35px;
+}
+.btn{
+  width: 100%;
+  height: 30px;
+  margin: 10px auto;
+  border-radius: 20px;
+  /* border: 2px solid firebrick; */
+}
+#btn1{
+  margin: 0px 10px;
+  width: 80%;
+  height: 30px;
+  /* margin: 10px auto; */
+  border-radius: 20px;
+  border: 2px solid firebrick;
+  /* width: 10px; */
+}
+
+#midpart{
+  width: 320px;
+  height: 400px;
+  background-color: lemonchiffon;
+  border: 2px solid violet;
+  display: flex;
+  margin: 50px auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#midparts{
+  width: 320px;
+  height: 300px;
+  background-color: lemonchiffon;
+  border: 2px solid violet;
+  display: flex;
+  margin: 50px auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+h3{
+  color: blue;
+}
+input{
+  padding: 10px;
+  margin: 4px 15px;
+  color: mediumpurple;
+  border-radius: 10px;
+}
+
+#submit{
+  width: 125px;
+  height: 30px;
+  border-radius: 15px;
+  background: rebeccapurple;
+  color: lemonchiffon;
+  font-size: 17px;
+  margin: 12px auto;
+  border: none;
+}
+
+footer{
+  position: fixed;
+  width: 100%;
+  /* height: 20px; */
+  padding: 0px;
+  bottom: 0px;
+  background-color: rebeccapurple;
+  color: lemonchiffon;
+  font-weight: lighter;
+}
+.shift{
+  color: blue;
+  cursor: pointer;
+  font-weight: bold;
+
+}
+
