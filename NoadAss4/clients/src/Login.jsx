@@ -1,50 +1,76 @@
-import axios from "axios";
 import React, { useState } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const navi = useNavigate();
+  // const [info, setInfo] = useState({
+  //   email: "",
+  //   password: "",
+  // });
   const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
-  console.log(typeof email);
+  const [password, setPassword] = useState("");
+  // console.log(typeof email);
 
-    async function submit(e) {
-      e.preventDefault();
+  const navi = useNavigate();
+  // const HandelChange = (e) => {
+  //   setInfo({ [e.target.name]: e.target.value });
+  // };
+  async function submit(e) {
+    e.preventDefault();
 
-      try{
-        const response = await axios.post("https://node-assign4-data.onrender.com/Client/login", {
-          email, pass
-        })
-        const data = response.data;
-        localStorage.setItem('token',data.token);
-      }
-      catch(err){
-        console.log(err);
-      }
+    try {
+      const response = await axios.post(
+        "https://node-assign4-data.onrender.com/Client/login",
+        { email, password }
+      );
+
+      // setInfo({
+      //   email: "",
+      //   password: "",
+      // });
+      const data = response.data;
+
+      localStorage.setItem("token", data.token);
+
+    } catch (err) {
+      console.log(err);
     }
+  }
 
-  
   return (
     <div>
       <section id="midparts">
         <h3>Login Page!</h3>
-        <form action="">
-          <label>
-            
+        <form method="POST">
+          <label className="inp">
             Email:
-            <input type="email"  placeholder="Enter your Email" autoComplete="off" onChange={(e)=>{
-              setEmail(e.target.value)
-            }} />
+            <input
+              type="email"
+              placeholder="Enter your Email"
+              autoComplete="off"
+              value={email}
+              onChange={(e)=>{
+                setEmail(e.target.value)
+              }}
+            />
           </label>
-          <label>
+          <label className="inp">
             Password:
-            <input type="password" placeholder="Enter password" autoComplete="off" onChange={(e)=>{
-              setPass(e.target.value)
-            }} />
+            <input
+              type="password"
+              placeholder="Enter password"
+              autoComplete="off"
+              value={password}
+              onChange={(e)=>{
+                setPassword(e.target.value)
+              }}
+            />
           </label>
-          <button id="submit" onClick={submit}>Submit</button>
+          <button id="submit" onClick={submit}>
+            Submit
+          </button>
         </form>
-
+        <hr className="hrl" />
         <p
           onClick={() => {
             navi("/signup");

@@ -37,7 +37,14 @@
   }
 }
 
-body{
+body::before{
+  background: url('./img/cyber-security-gee883c390_1280.jpg') no-repeat center center/cover;
+  content: "";
+  position: absolute;  
+  top: 0px;
+  left: 0px;
+  /* opacity: 0.5; */
+  z-index: -1;
   height: 100vh;
   width: 100%;
 }
@@ -48,10 +55,29 @@ body{
   height: 80px;
   /* border-radius: 36px; */
   margin: 5px auto;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   background-color: rebeccapurple;
   
+}
+.mylog{
+  display: block;
+  width: 100px;
+  height: 80px;
+}
+.log{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.inp{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#hd{
+  color: lemonchiffon;
 }
 .btns{
   display: flex;
@@ -68,6 +94,7 @@ body{
   border-radius: 20px;
   /* border: 2px solid firebrick; */
 }
+
 #btn1{
   margin: 0px 10px;
   width: 80%;
@@ -88,6 +115,7 @@ body{
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  border-radius: 15px;
 }
 #midparts{
   width: 320px;
@@ -110,6 +138,23 @@ input{
   border-radius: 10px;
 }
 
+.hrl{
+  width: 95%;
+  background-color: brown;
+}
+/* #email{
+  position: relative;
+  left: 40px;
+}
+#name{
+  position: relative;
+  left: 40px;
+}
+#pass{
+  position: relative;
+  left: 10px;
+} */
+
 #submit{
   width: 125px;
   height: 30px;
@@ -118,6 +163,7 @@ input{
   color: lemonchiffon;
   font-size: 17px;
   margin: 12px auto;
+  cursor: pointer;
   border: none;
 }
 
